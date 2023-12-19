@@ -10,7 +10,7 @@ app.use(express.json());
 app.use("", mainRouter);
 
 const PORT = process.env.PORT || 8000;
-mongoose.connect("mongodb+srv://singhpriya82172:Priya1234@cluster0.1eavgmh.mongodb.net/?retryWrites=true&w=majority", {
+mongoose.connect(process.env.MONGODB_URL, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 });
